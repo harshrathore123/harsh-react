@@ -1,4 +1,6 @@
+import AddUsernaemandPassword from "./component/AddUsernameandPassword"
 import FinalTodolist from "./component/FinalTodolist"
+import Inputtwo from "./component/Inputtwo"
 import Nvbar from "./component/Nvbar"
 
 function App() {
@@ -8,7 +10,9 @@ function App() {
     <>
      <Nvbar/>
      <FinalTodolist/>
-    </>
+    {/* <AddUsernaemandPassword/> */}
+    <Inputtwo/>
+     </>
   )
 }
 
