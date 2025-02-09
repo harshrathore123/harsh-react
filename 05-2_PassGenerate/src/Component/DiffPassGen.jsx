@@ -42,6 +42,7 @@ export default function DiffPassGen() {
     })
 
 
+
     //Only for showing the copy value in inputbox we will use useRef hook
 
     const selectref = useRef(null);
@@ -59,6 +60,7 @@ export default function DiffPassGen() {
                         className="outline-none w-full py-1 px-3"
                         value={inputbox}
                         ref={selectref}
+                        onChange={(e)=>setInputbox(e.target.value)}
                        
                     />
 
