@@ -9,7 +9,7 @@ import ContactUs from './Component/ContactUs/ContactUs.jsx'
 import Layout from '../../07-1_ReactRouterDom-AnotherWay/src/Layout.jsx'
 import User from './Component/MyUser/User.jsx'
 import Github from './Component/Github/Github.jsx'
-
+import { LoaderGithubInfo } from './Component/Github/Github.jsx'
 //We will make router provider from two ways
 
 
@@ -43,14 +43,18 @@ import Github from './Component/Github/Github.jsx'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path='/' element={<Layout/>}>
+    <Route path='/' element={<App/>}>
       <Route path='' element={<Home/>}/>
       <Route path='AboutUs' element={<AboutUs/>}/>
       <Route path='ContactUs' element={<ContactUs/>}/>
 
       {/* for link pr parameter lena */}
       <Route path='user/:userid' element={<User/>}/>
-      <Route path='github' element={<Github/>}/>
+      
+      <Route 
+      loader={LoaderGithubInfo}
+      path='github' 
+      element={<Github/>}/>
       
 
     </Route>
