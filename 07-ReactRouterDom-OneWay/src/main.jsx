@@ -10,6 +10,7 @@ import Layout from '../../07-1_ReactRouterDom-AnotherWay/src/Layout.jsx'
 import User from './Component/MyUser/User.jsx'
 import Github from './Component/Github/Github.jsx'
 import { LoaderGithubInfo } from './Component/Github/Github.jsx'
+import Home1 from './Component/Home1/Home1.jsx'
 //We will make router provider from two ways
 
 
@@ -56,7 +57,7 @@ const router = createBrowserRouter(
       path='github' 
       element={<Github/>}/>
       
-
+      <Route path='Home1' element={<Home1/>}/>
     </Route>
   )
 )
