@@ -10,7 +10,7 @@ import Layout from '../../07-1_ReactRouterDom-AnotherWay/src/Layout.jsx'
 import User from './Component/MyUser/User.jsx'
 import Github from './Component/Github/Github.jsx'
 import { LoaderGithubInfo } from './Component/Github/Github.jsx'
-import Home1 from './Component/Home1/Home1.jsx'
+
 //We will make router provider from two ways
 
 
@@ -49,6 +49,7 @@ const router = createBrowserRouter(
       <Route path='AboutUs' element={<AboutUs/>}/>
       <Route path='ContactUs' element={<ContactUs/>}/>
 
+
       {/* for link pr parameter lena */}
       <Route path='user/:userid' element={<User/>}/>
       
@@ -56,15 +57,17 @@ const router = createBrowserRouter(
       loader={LoaderGithubInfo}
       path='github' 
       element={<Github/>}/>
-      
-      <Route path='Home1' element={<Home1/>}/>
+
     </Route>
   )
 )
 createRoot(document.getElementById('root')).render(
   <StrictMode>
+   
     {/* //In this we will use Router Provider with property router to pass the router */}
     <RouterProvider router={router}/> 
+    
+
 
     {/* <App/> */}
   </StrictMode>,

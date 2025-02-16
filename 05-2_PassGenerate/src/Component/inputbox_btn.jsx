@@ -52,6 +52,11 @@ export default function Inputbox_btn() {
 
     // }
 
+/*************  ✨ Codeium Command ⭐  *************/
+    /**
+     * Copies the generated password to the user's clipboard and logs it to the console
+     */
+/******  72e4207e-d7c3-489d-b6b9-3ba9cd6f1fc4  *******/
     const copytoclip = () => {
         window.navigator.clipboard.writeText(pass);
         window.console.log(pass);
