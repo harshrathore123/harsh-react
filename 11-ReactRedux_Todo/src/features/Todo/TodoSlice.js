@@ -33,6 +33,9 @@ reducers:{
             val.id !== action.payload
         )
     },
+
+
+
 }  
 })
 

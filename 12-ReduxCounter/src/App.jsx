@@ -30,13 +30,15 @@ function App() {
      <div className='container'>
       <button onClick={increment}>+</button>
       <p>Count : {count} </p>
+      <br />
       <button onClick={decrement}>-</button>
+      <br /><br />
       <button onClick={reinitialse}>Reset</button>
-     
+     <br /><br />
       <input type="Number"
       value={input}
       onChange={(e)=>setInput(e.target.value)} />
-     
+     <br /><br />
       <button onClick={incbyamount}>Inc By Amount</button>
      </div>
 

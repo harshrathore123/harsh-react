@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import {useDispatch} from 'react-redux'
 import { addTodo } from '../features/Todo/TodoSlice';
+import Todos from './Todos';
 
 function Addtodo() {
     const[input,setInput] = useState("");
@@ -13,7 +14,8 @@ function Addtodo() {
         setInput("")
     }
   return (
-    <form className='space-x-3 mt-12'>
+    <>
+    <form className='space-x-3 mt-12 justify-center flex'>
         <input 
         type="text" 
         className='border border-gray-400 p-2 rounded'
@@ -30,6 +32,8 @@ function Addtodo() {
             Add Todo
         </button>
     </form>
+<Todos/>
+    </>
   )
 }
 
