@@ -7,10 +7,10 @@ function Addtodo() {
     const[input,setInput] = useState("");
     const dispatch = useDispatch()
 
-
     const addTodoHandler = (e) =>{
         e.preventDefault();
         dispatch(addTodo(input))
+        console.log(input);
         setInput("")
     }
   return (

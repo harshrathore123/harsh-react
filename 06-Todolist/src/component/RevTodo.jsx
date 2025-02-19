@@ -88,7 +88,11 @@ export default function RevTodo() {
     </div>
 
     {/* TABLE CONTAINER */}
-    <div className="container flex justify-content-center align-items-center w-full">
+   
+  </>
+  )
+}
+ <div className="container flex justify-content-center align-items-center w-full">
       <table className="table table-dark table-striped table-hover mt-5 text-center w-full ">
         <thead>
           <tr>
@@ -116,7 +120,3 @@ export default function RevTodo() {
         </tbody>
       </table>
     </div>
-
-  </>
-  )
-}

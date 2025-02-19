@@ -32,9 +32,7 @@ reducers:{
         state.todos = state.todos.filter((val)=>
             val.id !== action.payload
         )
-    },
-
-
+    }
 
 }  
 })
