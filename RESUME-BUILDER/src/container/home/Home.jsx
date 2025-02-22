@@ -22,7 +22,7 @@ function Home() {
   return (
    <>
     <div className="relative w-full mt-2 h-[500px]">
-      <div className="relative h-[1000px] overflow-hidden rounded-lg">
+      <div className="relative h-[500px] overflow-hidden rounded-lg">
         {images.map((src, index) => (
           <div
             key={index}
@@ -88,7 +88,7 @@ function Home() {
       </button>
     </div>
 
-    
+
    </>
   )
 }
