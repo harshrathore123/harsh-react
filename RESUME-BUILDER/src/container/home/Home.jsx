@@ -21,7 +21,7 @@ function Home() {
   
   return (
    <>
-    <div className="relative w-full h-[500px]">
+    <div className="relative w-full h-[500px] mt-20">
       <div className="relative h-[500px] overflow-hidden rounded-lg">
         {images.map((src, index) => (
           <div
