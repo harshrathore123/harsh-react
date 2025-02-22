@@ -51,7 +51,6 @@ export const Navbar = ({setShowLogin,showLogin}) => {
                                     border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent 
                                     lg:border-0 hover:text-orange-700 lg:p-0`
                 }
-                onClick={()=>setShowLogin(!showLogin)}
               >
                 SignUp
               </NavLink>
