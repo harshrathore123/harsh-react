@@ -14,9 +14,8 @@ export const LoginSlice = createSlice({
     initialState,
     reducers: {
         login:(state,action)=>{
-                      state.logindetail.push(action.payload)
+            state.logindetail.push(action.payload)
             localStorage.setItem("logindetail",JSON.stringify(state.logindetail));
-        toast("Login Successfully")
         }
 
     },

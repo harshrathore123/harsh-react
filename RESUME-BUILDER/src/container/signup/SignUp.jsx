@@ -21,86 +21,50 @@ function SignUp() {
 
     const handlesubmit = () =>{
 
-        if(!email || !password || !confirmpassword) return toast.error("Fill the form");
+        if(!email || !password || !confirmpassword){
+        toast.error("Fill the form");
+        // console.log("fill form")
+        }
+        else if(password !== confirmpassword){
+            toast.error("Password doesn't match");
+            // console.log("Password doesn't match");
+            
+        }
+        else if(password !== confirmpassword){
+          toast.error("Password doesn't match");
+        }
+        else if(password.length < 3 || confirmpassword.length < 3){
+          toast.error("Password should be more than 3 characters");
+        }
 
-        // else if(password !== confirmpassword) return toast.error("Password doesn't match");
-        // else if(password.length < 3 || confirmpassword.length < 3) return toast.error("Password should be more than 3 characters");
-        // else if(email.length < 3) return toast.error("Email should be more than 3 characters");
-        // else if(email.length > 30) return toast.error("Email should be less than 30 characters");
-        // else if(password.length > 30) return toast.error("Password should be less than 30 characters");
-        // else if(confirmpassword.length > 30) return toast.error("Password should be less than 30 characters");
-        // else if(!email.includes("@")) return toast("Email should be valid");
-        // else if(!email.includes(".")) return toast.error("Email should be valid");
-        // else if(!password.includes("@")) return toast("Password should be valid");
-        // else if(password.includes(".")) return toast.error("Password should be valid");
-        // else if(!confirmpassword.includes("@")) return toast.error("Password should be valid");
-        // else if(confirmpassword.includes(".")) return toast.error("Password should be valid");
-        // else if(password.includes("#")) return toast.error("Password should be valid");
-        // else if(confirmpassword.includes("#")) return toast.error("Password should be valid");
-        // else if(password.includes("$")) return toast.error("Password should be valid");
-        // else if(confirmpassword.includes("$")) return toast.error("Password should be valid");
-        // else if(password.includes("%")) return toast.error("Password should be valid");
-        // else if(confirmpassword.includes("%")) return toast.error("Password should be valid");
-        // else if(password.includes("^")) return toast.error("Password should be valid");
-        // else if(confirmpassword.includes("^")) return toast.error("Password should be valid");
-        // else if(password.includes("&")) return toast.error("Password should be valid");
-        // else if(confirmpassword.includes("&")) return toast.error("Password should be valid");
-        // else if(password.includes("*")) return toast.error("Password should be valid");
-        // else if(confirmpassword.includes("*")) return toast.error("Password should be valid");
-        // else if(password.includes("!")) return toast.error("Password should be valid");
-        // else if(confirmpassword.includes("!")) return toast.error("Password should be valid");
-        // else if(password.includes("(")) return toast.error("Password should be valid");
-        // else if(confirmpassword.includes("(")) return toast.error("Password should be valid");
-        // else if(password.includes(")")) return toast.error("Password should be valid");
-        // else if(confirmpassword.includes(")")) return toast.error("Password should be valid");
-        // else if(password.includes("-")) return toast.error("Password should be valid");
-        // else if(confirmpassword.includes("-")) return toast.error("Password should be valid");
-        // else if(password.includes("_")) return toast.error("Password should be valid");
-        // else if(confirmpassword.includes("_")) return toast.error("Password should be valid");
-        // else if(password.includes("+")) return toast.error("Password should be valid");
-        // else if(confirmpassword.includes("+")) return toast.error("Password should be valid");
-        // else if(password.includes("=")) return toast.error("Password should be valid");
-        // else if(confirmpassword.includes("=")) return toast.error("Password should be valid");
-        // else if(password.includes("/")) return toast.error("Password should be valid");
-        // else if(confirmpassword.includes("/")) return toast.error("Password should be valid");
-        // else if(password.includes("?")) return toast.error("Password should be valid");
-        // else if(confirmpassword.includes("?")) return toast.error("Password should be valid");
-        // else if(password.includes(">")) return toast.error("Password should be valid");
-        // else if(confirmpassword.includes(">")) return toast.error("Password should be valid");
-        // else if(password.includes("<")) return toast.error("Password should be valid");
-        // else if(confirmpassword.includes("<")) return toast.error("Password should be valid");
-        // else if(password.includes(".")) return toast.error("Password should be valid");
-        // else if(confirmpassword.includes(".")) return toast.error("Password should be valid");
-        // else if(password.includes(",")) return toast.error("Password should be valid");
-        // else if(confirmpassword.includes(",")) return toast.error("Password should be valid");
-        // else if(password.includes(";")) return toast.error("Password should be valid");
-        // else if(confirmpassword.includes(";")) return toast.error("Password should be valid");
-        // else if(password.includes(":")) return toast.error("Password should be valid");
-        // else if(confirmpassword.includes(":")) return toast.error("Password should be valid");
-        // else if(password.includes("{")) return toast.error("Password should be valid");
-        // else if(confirmpassword.includes("{")) return toast.error("Password should be valid");
-        // else if(password.includes("}")) return toast.error("Password should be valid");
-        // else if(confirmpassword.includes("}")) return toast.error("Password should be valid");
-        // else if(password.includes("|")) return toast.error("Password should be valid");
-        // else if(confirmpassword.includes("|")) return toast.error("Password should be valid");
-        // else if(password.includes("[")) return toast.error("Password should be valid");
-        // else if(confirmpassword.includes("[")) return toast.error("Password should be valid");
-        // else if(password.includes("]")) return toast.error("Password should be valid");
-        // else if(confirmpassword.includes("]")) return toast.error("Password should be valid");
-        // else if(password.includes("@")) return toast.error("Password should be valid");
-        // else if(confirmpassword.includes("@")) return toast.error("Password should be valid");
-        // else if(password.includes("#")) return toast.error("Password should be valid");
-        // else if(confirmpassword.includes("#")) return toast.error("Password should be valid");
-        // else if(password.includes("%")) return toast.error("Password should be valid");
-        // else if(confirmpassword.includes("%")) return toast.error("Password should be valid");
-        // else if(password.includes("^")) return toast.error("Password should be valid");
-        // else if(confirmpassword.includes("^")) return toast.error("Password should be valid");
-        // else if(password.includes("~")) return toast.error("Password should be valid");
-        // else if(confirmpassword.includes("~")) return toast.error("Password should be valid");
-        // else if(password.includes("`")) return toast.error("Password should be valid");
+        else if(!email.includes("@")){
+          toast.error("Email should be valid");
+        }
+        else if(!email.includes(".")){
+          toast.error("Email should be valid");
+        }
 
+        else if(!password.includes("@")){
+          toast.error("Password must be carry @ symbol");
+        }
 
-        else{dispatch(login(paste));setEmail("");setPassword("");setConfirmPassword("");}
+        else if(password.includes(".")){  
+          toast.error("Password should be valid");
+        }
+
+        else if(!confirmpassword.includes("@")) { 
+          toast.error("Password should be valid"); 
+        }
+
+       
+        else{
+          dispatch(login(paste));
+          toast.success("Successfully Signed Up");
+        }
+
+        setEmail("");
+        setPassword("");
+        setConfirmPassword("");
     }
 
 
@@ -162,7 +126,7 @@ function SignUp() {
                   </div>
                   
                 <button 
-                  type="submit" 
+                   
                   className="w-full text-white bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg 
                   text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
                   onClick={handlesubmit}>
